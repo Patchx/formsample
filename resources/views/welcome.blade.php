@@ -72,9 +72,10 @@
         <div class="col-sm-8 blog-main">
 
           <div class="blog-post">
-            <?php
-              echo "form here";
-            ?>
+            {!! Form::open() !!}
+            {!! Form::label('label', 'Label') !!}
+            {!! Form::text('title', null) !!}
+            {!! Form::close() !!}
           </div><!-- /.blog-post -->
 
         </div><!-- /.blog-main -->
