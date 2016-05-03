@@ -13,4 +13,5 @@ var elixir = require('laravel-elixir');
 
 elixir(function(mix) {
     mix.sass('app.scss');
+    // mix.copy('vendor/bootstrap-calendar/css', 'public/bootstrap-calendar/css');
 });
