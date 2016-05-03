@@ -13,5 +13,6 @@ var elixir = require('laravel-elixir');
 
 elixir(function(mix) {
     mix.sass('app.scss');
-    // mix.copy('vendor/bootstrap-calendar/css', 'public/bootstrap-calendar/css');
+    mix.copy('vendor/twbs/bootstrap/dist/css/bootstrap.min.css', 'public/css/bootstrap.min.css');
+    mix.copy('vendor/twbs/bootstrap/dist/js/bootstrap.min.js', 'public/js/bootstrap.min.js');
 });

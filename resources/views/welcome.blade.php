@@ -12,13 +12,12 @@
 	
 		<title>Laravel</title>
 
-		<link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet" type="text/css">
 
     <!-- Bootstrap core CSS -->
-    <link href="../../dist/css/bootstrap.min.css" rel="stylesheet">
+		<link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <link href="../../assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+		<link rel="stylesheet" href="{{ asset('css/bootstrap-ie10-viewport-bug-workaround.css') }}">
 
 		<!-- Stylesheet -->
 		<php? HTML::style('css/welcome.css'); ?>
@@ -166,10 +165,10 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
-    <script src="../../dist/js/bootstrap.min.js"></script>
+		<script src="{{ asset('js/bootstrap.min.js') }}"></script>
+
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+		<script src="{{ asset('js/bootstrap-ie10-viewport-bug-workaround.js') }}"></script>
 
 	</body>
 </html>
