@@ -106,7 +106,7 @@
 
         </div><!-- /.blog-main -->
 
-        <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
+        <div class="col-sm-4 blog-sidebar hidden-xs">
           <div class="sidebar-module sidebar-module-inset">
             <h4>Who built this anyways?</h4>
             <p>Hi! My name is Robert, and I built this site. If you would like to talk, feel free to contact me at robert.anderson.fl@gmail.com or find me on the social links below:</p>
