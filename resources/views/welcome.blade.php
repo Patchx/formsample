@@ -52,7 +52,8 @@
     <div class="container">
 
       <div class="blog-header">
-        <h1 class="blog-title">formSample</h1>
+        <h1 class="blog-title">Sample Form</h1>
+        <br>
       </div>
 
       <div class="row">
@@ -61,11 +62,51 @@
 
           <div class="blog-post">
 
-          <?php
+            <ul>
+                @foreach($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
 
-            // Form::model($entry, array('route' => array('entry.update', $entry->id)))
+            {!! Form::open(array('class' => 'form')) !!}
 
-          ?>
+            <div class="form-group">
+                {!! Form::label('First Name') !!}
+                {!! Form::text('name', null, 
+                    array('required', 
+                          'class'=>'form-control', 
+                          'placeholder'=>'first name')) !!}
+            </div>
+
+            <div class="form-group">
+                {!! Form::label('Last Name') !!}
+                {!! Form::text('name', null, 
+                    array('required', 
+                          'class'=>'form-control', 
+                          'placeholder'=>'last name')) !!}
+            </div>
+
+            <div class="form-group">
+                {!! Form::label('Your E-mail Address') !!}
+                {!! Form::text('email', null, 
+                    array('required', 
+                          'class'=>'form-control', 
+                          'placeholder'=>'Your e-mail address')) !!}
+            </div>
+
+            <div class="form-group">
+                {!! Form::label('Your Phone Number') !!}
+                {!! Form::text('phone', null, 
+                    array('required', 
+                          'class'=>'form-control', 
+                          'placeholder'=>'Your phone number')) !!}
+            </div>
+
+            <div class="form-group">
+                {!! Form::submit('Submit >>', 
+                  array('class'=>'btn btn-primary')) !!}
+            </div>
+            {!! Form::close() !!}
 
           </div><!-- /.blog-post -->
 
