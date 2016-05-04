@@ -25,18 +25,6 @@
 
 	<body>
 
-<!--     <div class="blog-masthead">
-      <div class="container">
-        <nav class="blog-nav">
-          <a class="blog-nav-item active" href="#">Home</a>
-          <a class="blog-nav-item" href="#">Contact</a>
-          <a class="blog-nav-item" href="#">About</a>
-          <a class="blog-nav-item" href="#">Terms</a>
-        </nav>
-      </div>
-    </div>
- -->
-
 		<nav class="navbar navbar-default">
 		  <div class="container-fluid">
 		    <!-- Brand and toggle get grouped for better mobile display -->
@@ -72,10 +60,13 @@
         <div class="col-sm-8 blog-main">
 
           <div class="blog-post">
-            {!! Form::open() !!}
-            {!! Form::label('label', 'Label') !!}
-            {!! Form::text('title', null) !!}
-            {!! Form::close() !!}
+
+          <?php
+
+            // Form::model($entry, array('route' => array('entry.update', $entry->id)))
+
+          ?>
+
           </div><!-- /.blog-post -->
 
         </div><!-- /.blog-main -->
