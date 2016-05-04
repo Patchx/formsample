@@ -14,25 +14,31 @@ class EntriesController extends Controller
     return view('welcome', ['entry' => $entry]);  
   }
 
- public function store(Request $request) {
-    $entry = new \App\Entry;
+	public function store(Request $request) 
+	{
+  $entry = new \App\Entry;
 
-    // populate the model with the form data
-    $entry->firstname = $request->firstname;
-    $entry->lastname = $request->lastname;
-    $entry->email = $request->email;
-    $entry->phone = $request->phone;
+  // populate the model with the form data
+  $entry->firstname = $request->firstname;
+  $entry->lastname = $request->lastname;
+  $entry->email = $request->email;
+  $entry->phone = $request->phone;
 
-		// save the model to create a new object in the database
-		  if (!$entry->save()) {
-		    return redirect()
-		          ->action('EntriesController@create')
-		      ->withInput();
-		  }
+	// save the model to create a new object in the database
+	  if (!$entry->save()) {
+	    return redirect()
+	          ->action('EntriesController@create')
+	      ->withInput();
+	  }
 
-		  // success!
-		  return redirect()
-		    ->action('EntriesController@create')
-		    ->with('message', 'Your '. $entry->firstname . ' ' . $entry->lastname . ' has been created!');
-		}
+	  // success!
+		return redirect("entry/$entry->id");
+	}
+
+  public function show($id)
+  {
+	  $entry = \App\Entry::find($id);
+	  return view('show', ['entry' => $entry]);
+	}
+
 }
