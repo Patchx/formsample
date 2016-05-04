@@ -68,11 +68,11 @@
                 @endforeach
             </ul>
 
-            {!! Form::open(array('class' => 'form')) !!}
+            {!! Form::model($entry, ['action' => 'EntriesController@store']) !!}
 
             <div class="form-group">
                 {!! Form::label('First Name') !!}
-                {!! Form::text('name', null, 
+                {!! Form::text('firstname', null, 
                     array('required', 
                           'class'=>'form-control', 
                           'placeholder'=>'first name')) !!}
@@ -80,7 +80,7 @@
 
             <div class="form-group">
                 {!! Form::label('Last Name') !!}
-                {!! Form::text('name', null, 
+                {!! Form::text('lastname', null, 
                     array('required', 
                           'class'=>'form-control', 
                           'placeholder'=>'last name')) !!}

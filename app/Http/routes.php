@@ -11,4 +11,5 @@
 |
 */
 
-Route::get('/', 'EntriesController@home');
+Route::get('/', 'EntriesController@create');
+Route::post('/', 'EntriesController@store');
