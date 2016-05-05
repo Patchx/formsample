@@ -17,7 +17,7 @@ class CreateEntriesTable extends Migration
             $table->string('firstname');
             $table->string('lastname');
             $table->string('email')->unique();
-            $table->string('phone');
+            $table->bigInteger('phone');
             $table->timestamps();
         });
     }

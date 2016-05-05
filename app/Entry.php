@@ -20,7 +20,7 @@ class Entry extends Model
 	        'firstname' => 'required',
 	        'lastname' => 'required',
 	        'email' => 'required|email|unique:entries',
-	        'phone' => 'required|min:8'
+	        'phone' => 'required|digits:10'
 	    ]
 		);
 

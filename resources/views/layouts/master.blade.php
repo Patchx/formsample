@@ -19,7 +19,13 @@
     <link rel="stylesheet" href="{{ asset('css/bootstrap-ie10-viewport-bug-workaround.css') }}">
 
     <!-- Stylesheet -->
-    <link rel="stylesheet" href="{{ asset('css/welcome.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/master.css') }}">
+
+    <!-- JQuery CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+    <!-- JQuery Validation-->
+    <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.15.0/jquery.validate.js"></script>
 
   </head>
 
@@ -66,12 +72,13 @@
 
 <!-- Bootstrap core JavaScript
 ================================================== -->
-<!-- Placed at the end of the document so the pages load faster -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script src="{{ asset('js/bootstrap.min.js') }}"></script>
+  <!-- Placed at the end of the document so the pages load faster -->
 
-<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="{{ asset('js/bootstrap-ie10-viewport-bug-workaround.js') }}"></script>
+  <!-- Bootstrap local -->
+  <script src="{{ asset('js/bootstrap.min.js') }}"></script>
+
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <script src="{{ asset('js/bootstrap-ie10-viewport-bug-workaround.js') }}"></script>
 
   </body>
 </html>

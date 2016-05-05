@@ -23,7 +23,9 @@
             @endforeach
         </ul>
 
-        {!! Form::model($entry, ['action' => 'EntriesController@store']) !!}
+        {!! Form::model($entry, 
+        ['id'=>'entryForm'],
+        ['action' => 'EntriesController@store']) !!}
 
         <div class="form-group">
             {!! Form::label('First Name') !!}
@@ -44,17 +46,21 @@
         <div class="form-group">
             {!! Form::label('Your E-mail Address') !!}
             {!! Form::text('email', null, 
-                array('required', 
-                      'class'=>'form-control', 
-                      'placeholder'=>'Your e-mail address')) !!}
+                array('required',
+                  'id'=>'email',
+                  'name'=>'email',
+                  'class'=>'form-control', 
+                  'placeholder'=>'Your e-mail address')) !!}
         </div>
 
         <div class="form-group">
             {!! Form::label('Your Phone Number') !!}
             {!! Form::text('phone', null, 
                 array('required', 
-                      'class'=>'form-control', 
-                      'placeholder'=>'Your phone number')) !!}
+                  'id'=>'phone',
+                  'name'=>'phone',
+                  'class'=>'form-control', 
+                  'placeholder'=>'Your phone number')) !!}
         </div>
 
         <div class="form-group">
@@ -62,6 +68,22 @@
               array('class'=>'btn btn-primary')) !!}
         </div>
         {!! Form::close() !!}
+
+        <script>
+          $("#entryForm").validate({
+            rules: {
+              email: {
+                email: true
+              },
+              phone: {
+                digits: true,
+                minlength: [10],
+                maxlength: [10]
+              }
+            }
+          });
+
+        </script>
 
       </div><!-- /.blog-post -->
 

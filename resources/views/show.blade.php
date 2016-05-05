@@ -7,8 +7,7 @@
 <div class="container">
 
   <div class="blog-header">
-    <h2 class="blog-title">Sample Form</h2>
-    <br>
+    <h3>Entry Data</h3>
   </div>
 
   <div class="row">
@@ -31,7 +30,8 @@
 					<?php
 						echo $entry->firstname . " " . $entry->lastname . "<br>";
 						echo $entry->email . "<br>";
-						echo $entry->phone;
+						echo preg_replace("/([0-9]{3})([0-9]{3})([0-9]{4})/", "($1) $2-$3", $entry->phone); //Format as phone number
+
 					?>
 				</p>
 
