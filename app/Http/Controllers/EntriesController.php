@@ -27,7 +27,7 @@ class EntriesController extends Controller
 	// save the model to create a new object in the database
 	  if (!$entry->save()) {
 	    return redirect()
-	          ->action('EntriesController@create')
+	      ->action('EntriesController@create')
 	      ->withInput();
 	  }
 

@@ -14,6 +14,3 @@
 Route::get('/', 'EntriesController@create');
 Route::post('/', 'EntriesController@store');
 Route::get('entry/{id}', 'EntriesController@show');
-Route::get('test/{id}', function ($id) {
-    return 'Entry '.$id;
-});
