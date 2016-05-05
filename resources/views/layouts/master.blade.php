@@ -49,6 +49,12 @@
       </div><!-- /.container-fluid -->
     </nav>
 
+    @if (session('status'))
+        <div class="alert alert-danger">
+            {{ session('status') }}
+        </div>
+    @endif
+
     @yield('content')    
 
     <footer class="blog-footer">

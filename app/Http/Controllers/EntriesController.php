@@ -16,15 +16,22 @@ class EntriesController extends Controller
 
 	public function store(Request $request) 
 	{
-  $entry = new \App\Entry;
+		$message = Entry::validate($request);
+		if ($message != "valid") {
+	    return redirect()
+	      ->action('EntriesController@create')
+	      ->with('status', $message);
+		}
 
-  // populate the model with the form data
-  $entry->firstname = $request->firstname;
-  $entry->lastname = $request->lastname;
-  $entry->email = $request->email;
-  $entry->phone = $request->phone;
+	  $entry = new \App\Entry;
 
-	// save the model to create a new object in the database
+	  // populate the model with the form data
+	  $entry->firstname = $request->firstname;
+	  $entry->lastname = $request->lastname;
+	  $entry->email = $request->email;
+	  $entry->phone = $request->phone;
+
+		// save the model to create a new object in the database
 	  if (!$entry->save()) {
 	    return redirect()
 	      ->action('EntriesController@create')

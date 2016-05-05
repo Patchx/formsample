@@ -3,6 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Validator;
 
 class Entry extends Model
 {
@@ -22,6 +23,13 @@ class Entry extends Model
 	        'phone' => 'required|min:8'
 	    ]
 		);
+
+		if ($validator->fails())
+		{
+			return $validator->messages();
+		}
+		// If no errors, return true
+		return "valid";
 	}
 
   // Database table association
