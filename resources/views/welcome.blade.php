@@ -97,11 +97,11 @@
       <div class="sidebar-module">
         <h4>Social Links</h4>
         <ol class="list-unstyled">
-          <li><a href="#">Portfolio</a></li>
-          <li><a href="#">Resume</a></li>
-          <li><a href="#">GitHub</a></li>
-          <li><a href="#">LinkedIn</a></li>
-          <li><a href="#">Twitter</a></li>
+          <li><a href="https://anderson-portfolio.herokuapp.com/" target="_blank">Portfolio</a></li>
+          <li><a href="https://drive.google.com/file/d/0B2QzEXlTkhI7SHRETnJkXzBhT2M/view?usp=sharing" target="_blank">Resume</a></li>
+          <li><a href="https://github.com/Patchx" target="_blank">GitHub</a></li>
+          <li><a href="https://www.linkedin.com/in/robertandersonlink" target="_blank">LinkedIn</a></li>
+          <li><a href="https://twitter.com/randerTw?lang=en" target="_blank">Twitter</a></li>
         </ol>
       </div>
     </div><!-- /.blog-sidebar -->
